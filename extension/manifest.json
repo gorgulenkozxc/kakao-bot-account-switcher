@@ -1,0 +1,30 @@
+{
+	"manifest_version": 3,
+	"name": "Kakao bot account switcher",
+	"version": "1.0",
+	"description": "Adds a menu to update access token in database of kakao bot",
+	"icons": {
+		"16": "icons/kakao16.png",
+		"32": "icons/kakao32.png",
+		"48": "icons/kakao48.png",
+		"128": "icons/kakao128.png"
+	},
+
+	"permissions": [
+		"storage",
+		"tabs",
+		"cookies",
+		"activeTab",
+		"scripting",
+		"declarativeContent",
+		"webRequest",
+		"nativeMessaging"
+	],
+	"host_permissions": ["<all_urls>"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_popup": "popup.html"
+	}
+}
