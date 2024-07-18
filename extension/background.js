@@ -1,4 +1,4 @@
-const secret = 'Bafee645a7f9000637f1545302e1e61148bd0e782a94e393f8a79364c76320547'
+const secret = 'afee645a7f9000637f1545302e1e61148bd0e782a94e393f8a79364c76320547'
 
 chrome.action.onClicked.addListener((tab) => {
 	chrome.scripting.executeScript({
