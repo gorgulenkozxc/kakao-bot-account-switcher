@@ -93,7 +93,7 @@ app.post('/cookies', async (req, res) => {
 			`INSERT INTO kakao._cookies (${Object.keys(newCookie).join(',')}) VALUES (${Object.values(
 				newCookie,
 			)
-				.map((value) => `'${value}'`)
+				.map((value) => `'${encodeURIComponent(decodeURIComponent(decodeURIComponent(value as string)))}'`)
 				.join(',')})`,
 		)
 		res.send('ok')
