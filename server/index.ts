@@ -96,9 +96,7 @@ app.post('/cookies', async (req, res) => {
 				.map((value) => `'${encodeURIComponent(decodeURIComponent(decodeURIComponent(value as string)))}'`)
 				.join(',')})`,
 		)
-		res.send('ok')
-
-		res.sendStatus(200)
+		res.status(200).json({ message: 'ok' })
 	} catch (e) {
 		console.error(e)
 		res.status(500).json({ message: e })
